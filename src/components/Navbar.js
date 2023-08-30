@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AppBar, Stack, Toolbar, Typography } from '@mui/material'
+import { AppBar, Stack, Toolbar, Typography,Button } from '@mui/material'
 
 export default class Navbar extends Component {
   render() {
@@ -16,6 +16,11 @@ export default class Navbar extends Component {
             >
               Dashboard
             </Typography>
+            <Button variant="text" href='/' color='inherit' >Home</Button>
+            <Button variant="text" href='/Create' color='inherit' >Create</Button>
+            
+
+            
           </Stack>
         </Toolbar>
       </AppBar>

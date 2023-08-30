@@ -8,6 +8,7 @@ import {TableContainer,Table,TableHead,TableBody,TableRow,TableCell,Paper} from 
 
 
 
+
 export default function Userlist() {
 
   const[users,SetUsers]=useState([])
@@ -19,9 +20,15 @@ export default function Userlist() {
       SetUsers(response.data.data)
     })
   },[])
+  const data = {
+    first_name: "",
+    email: "",
+    last_name:""
+};
+
 
   return (
-    
+    <>
     <TableContainer component={Paper} sx={{ width: '85%' }} >
         <Table>
           <TableHead>
@@ -59,5 +66,6 @@ export default function Userlist() {
         </Table>
     </TableContainer>
     
+    </>
   )
 }
