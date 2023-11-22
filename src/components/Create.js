@@ -34,20 +34,7 @@ export default function Create() {
         SetUsers([inputData,...users])
         
     }
-    const handleUpdate=(el)=>{
-      
-      el.first_name="Raj"
-      el.last_name="Naik"
-      el.email="Raj@gmail.com"
-      axios.put("https://reqres.in/api/users/" + el.id);
-      const usersClone = [...users];
-      const index = usersClone.indexOf(el);
-      usersClone[index]={...el};
-      
-      SetUsers(usersClone);
-      
-  }
-
+    
   return (
     <>
     <TableContainer component={Paper} sx={{ width: '85%' }} >
@@ -58,7 +45,6 @@ export default function Create() {
               <TableCell>First Name</TableCell>
               <TableCell>Last Name</TableCell>
               <TableCell>Email</TableCell>
-              <TableCell>Update</TableCell>
             </TableRow>
             
           </TableHead>
@@ -73,7 +59,7 @@ export default function Create() {
                     <TableCell>{el.first_name}</TableCell>
                     <TableCell>{el.last_name}</TableCell>
                     <TableCell>{el.email}</TableCell>
-                    <TableCell><Button onClick={()=>handleUpdate(el)}>Update</Button></TableCell>
+                    
                   </TableRow>
                   
                   </>
